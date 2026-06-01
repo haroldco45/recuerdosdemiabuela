@@ -60,7 +60,7 @@
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2.5rem;
             margin-top: 2rem;
         }
@@ -69,11 +69,12 @@
             background: #ffffff;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 15 rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 1px solid #e1dacb;
             display: flex;
             flex-direction: column;
+            height: 100%;
         }
 
         .product-card:hover {
@@ -84,7 +85,7 @@
         .product-image-wrapper {
             background-color: #eae3d5;
             width: 100%;
-            padding-top: 145%; 
+            padding-top: 100%; /* Proporción cuadrada 1:1 óptima para productos */
             position: relative;
         }
 
@@ -94,14 +95,17 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: contain; 
+            object-fit: cover; /* Ajuste continuo para llenar el contenedor armónicamente */
             background: #fdfbf7;
         }
 
         .product-info {
             padding: 1.5rem;
             text-align: center;
-            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
             background: #ffffff;
             border-top: 1px solid #f0eae1;
         }
@@ -117,7 +121,7 @@
             font-size: 0.95rem;
             color: #555;
             margin-bottom: 1.5rem;
-            min-height: 45px;
+            min-height: 70px; /* Asegura que los botones se alineen perfectamente */
         }
 
         .btn-order {
@@ -130,6 +134,9 @@
             font-weight: bold;
             font-size: 0.95rem;
             transition: background-color 0.2s ease;
+            align-self: center;
+            width: 100%;
+            max-width: 220px;
         }
 
         .btn-order:hover {
@@ -176,8 +183,10 @@
                     <img src="kefir4.jpeg" alt="Kéfir de Leche - 16 Beneficios">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">Kéfir de Leche</h3>
-                    <p class="product-description">Yogur búlgaro artesanal, cremoso y fermentado naturalmente con 16 beneficios clave para tu salud digestiva.</p>
+                    <div>
+                        <h3 class="product-title">Kéfir de Leche</h3>
+                        <p class="product-description">Yogur búlgaro artesanal, cremoso y fermentado naturalmente con 16 beneficios clave para tu salud digestiva.</p>
+                    </div>
                     <a href="https://wa.me/573001638585" target="_blank" class="btn-order">Pedir por WhatsApp</a>
                 </div>
             </div>
@@ -188,8 +197,10 @@
                     <img src="kefir3.jpeg" alt="Kéfir de Agua - 12 Beneficios">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">Kéfir de Agua</h3>
-                    <p class="product-description">Bebida probiótica, ligera y refrescante, con 12 increíbles beneficios para tu bienestar diario.</p>
+                    <div>
+                        <h3 class="product-title">Kéfir de Agua</h3>
+                        <p class="product-description">Bebida probiótica, ligera y refrescante, con 12 increíbles beneficios para tu bienestar diario.</p>
+                    </div>
                     <a href="https://wa.me/573001638585" target="_blank" class="btn-order">Pedir por WhatsApp</a>
                 </div>
             </div>
@@ -200,8 +211,10 @@
                     <img src="kombucha.jpeg" alt="Kombucha Artesanal">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">Kombucha</h3>
-                    <p class="product-description">Té fermentado artesanal, burbujeante, lleno de vida, ácidos orgánicos y una vitalidad inigualable.</p>
+                    <div>
+                        <h3 class="product-title">Kombucha</h3>
+                        <p class="product-description">Té fermentado artesanal, burbujeante, lleno de vida, ácidos orgánicos y una vitalidad inigualable.</p>
+                    </div>
                     <a href="https://wa.me/573001638585" target="_blank" class="btn-order">Pedir por WhatsApp</a>
                 </div>
             </div>
@@ -212,8 +225,10 @@
                     <img src="kefir5.jpeg" alt="Postre Mielmesabe de Kéfir">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">Postre Mielmesabe</h3>
-                    <p class="product-description">Una delicia dulce y saludable elaborada a base de nuestro kéfir tradicional. El origen verdadero.</p>
+                    <div>
+                        <h3 class="product-title">Postre Mielmesabe</h3>
+                        <p class="product-description">Una delicia dulce y saludable elaborada a base de nuestro kéfir tradicional. El origen verdadero.</p>
+                    </div>
                     <a href="https://wa.me/573001638585" target="_blank" class="btn-order">Pedir por WhatsApp</a>
                 </div>
             </div>
@@ -224,8 +239,10 @@
                     <img src="kefir6.jpeg" alt="Suero 100% de Kéfir">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">Suero de Kéfir</h3>
-                    <p class="product-description">Suero 100% natural hecho con amor, ideal para nutrir tus recetas y transformar tu bienestar.</p>
+                    <div>
+                        <h3 class="product-title">Suero de Kéfir</h3>
+                        <p class="product-description">Suero 100% natural hecho con amor, ideal para nutrir tus recetas y transformar tu bienestar.</p>
+                    </div>
                     <a href="https://wa.me/573001638585" target="_blank" class="btn-order">Pedir por WhatsApp</a>
                 </div>
             </div>
